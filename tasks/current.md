@@ -1,3 +1,3 @@
-# Tarefa
+# Tarefa concluída
 
-Entregar projeto Laya prático, curso v2 separado e publicação no portal/catálogos. Implementação e testes concluídos. Publicação via GitHub Pages para guia/curso e git para portal/derivados. Evidência final de publicação em docs/PUBLICACAO.md quando registrada.
+Projeto Laya prático, curso v2 em repositório separado e publicação no portal/catálogos entregues. Os cinco repositórios receberam os pushes. Guia e curso responderam HTTP 200. Evidências e commits em [PUBLICACAO](../docs/PUBLICACAO.md); validações em [VALIDACAO](../docs/VALIDACAO.md).
