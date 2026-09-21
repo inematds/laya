@@ -1,0 +1,7 @@
+{
+  "python": "3.12.3",
+  "torch": "2.13.0+cu130",
+  "transformers": "5.14.1",
+  "gpu": "NVIDIA GB10",
+  "checkpoint_config_cache": "/home/nmaldaner/.cache/huggingface/hub/models--convaiinnovations--laya/snapshots/1c5edc17a7acd8701df6fc341c0d179f1c62c982/multilingual/rl_agent_config.json"
+}

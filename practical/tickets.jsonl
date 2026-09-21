@@ -1,0 +1,16 @@
+{"id": "pt-01", "message": "Fui cobrado duas vezes. Quero meu dinheiro de volta.", "expected_department": "billing"}
+{"id": "pt-02", "message": "O aplicativo fecha ao clicar em salvar. Como resolver?", "expected_department": "technical"}
+{"id": "pt-03", "message": "Quero comprar 20 licenças. Qual é o preço?", "expected_department": "sales"}
+{"id": "pt-04", "message": "Bom dia, obrigado pela ajuda de ontem.", "expected_department": "other"}
+{"id": "pt-05", "message": "Preciso da segunda via da fatura deste mês.", "expected_department": "billing"}
+{"id": "pt-06", "message": "Não consigo entrar na minha conta. A senha dá erro.", "expected_department": "technical"}
+{"id": "pt-07", "message": "Gostaria de uma demonstração para contratar o plano empresarial.", "expected_department": "sales"}
+{"id": "pt-08", "message": "Qual a previsão do tempo para amanhã?", "expected_department": "other"}
+{"id": "pt-09", "message": "O pagamento no cartão foi recusado e preciso atualizar a cobrança.", "expected_department": "billing"}
+{"id": "pt-10", "message": "O servidor está fora do ar e nossa equipe não consegue trabalhar.", "expected_department": "technical"}
+{"id": "pt-11", "message": "Existe desconto na assinatura anual para novos clientes?", "expected_department": "sales"}
+{"id": "pt-12", "message": "Olá!", "expected_department": "other"}
+{"id": "pt-13", "message": "Se não devolverem a cobrança duplicada hoje, vou cancelar.", "expected_department": "billing"}
+{"id": "pt-14", "message": "A integração com o calendário parou de sincronizar.", "expected_department": "technical"}
+{"id": "pt-15", "message": "Nossa empresa quer negociar um contrato de cem usuários.", "expected_department": "sales"}
+{"id": "pt-16", "message": "Enviei esta mensagem por engano. Desconsidere.", "expected_department": "other"}

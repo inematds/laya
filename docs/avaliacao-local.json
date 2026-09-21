@@ -1,0 +1,1445 @@
+{
+  "samples": 16,
+  "accuracy": 0.8125,
+  "majority_baseline": 0.25,
+  "brier_multiclass_sum": 0.30834765125,
+  "ece_top_probability_10_bins": 0.17988125000000002,
+  "results": [
+    {
+      "id": "pt-01",
+      "expected": "billing",
+      "predicted": "billing",
+      "correct": true,
+      "brier": 0.0,
+      "result": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "billing",
+            "probabilities": {
+              "billing": 1.0,
+              "technical": 0.0,
+              "sales": 0.0,
+              "other": 0.0
+            },
+            "confidence": 1.0,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "urgency": {
+            "type": "score",
+            "score": 0.843,
+            "legend": {
+              "0": "normal request, no deadline",
+              "1": "time-sensitive request",
+              "2": "service blocked or immediate deadline"
+            },
+            "probabilities": {
+              "0": 0.205,
+              "1": 0.7471,
+              "2": 0.0479
+            },
+            "confidence": 0.3735,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "churn_risk": {
+            "type": "noul",
+            "noul": 0.0326,
+            "confidence": 0.9674,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "refund_requested": {
+            "type": "noul",
+            "noul": 0.9876,
+            "confidence": 0.9876,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 264,
+          "output_tokens": 0
+        },
+        "routing": {
+          "model": "multilingual",
+          "repo": "convaiinnovations/laya/multilingual",
+          "reason": "explicit model='multilingual'",
+          "detection": null,
+          "workflow": null
+        },
+        "policy": {
+          "destination": "billing",
+          "needs_review": true,
+          "action": "human_review",
+          "automated_action_executed": false,
+          "threshold": 0.85,
+          "reasons": [
+            "Probabilidades ainda não validadas no seu domínio; revisão humana obrigatória.",
+            "Pedido de reembolso exige conferência humana."
+          ]
+        },
+        "runtime": {
+          "inference_ms": 1401.0,
+          "device": "cuda",
+          "state_tokens": 23,
+          "state_token_budget": 965,
+          "calibration": "not_validated_for_customer_domain",
+          "simulation": false
+        }
+      }
+    },
+    {
+      "id": "pt-02",
+      "expected": "technical",
+      "predicted": "technical",
+      "correct": true,
+      "brier": 3.6600000000001466e-06,
+      "result": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "probabilities": {
+              "billing": 0.0002,
+              "technical": 0.9984,
+              "sales": 0.0005,
+              "other": 0.0009
+            },
+            "confidence": 0.9902,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "urgency": {
+            "type": "score",
+            "score": 1.505,
+            "legend": {
+              "0": "normal request, no deadline",
+              "1": "time-sensitive request",
+              "2": "service blocked or immediate deadline"
+            },
+            "probabilities": {
+              "0": 0.0401,
+              "1": 0.4147,
+              "2": 0.5452
+            },
+            "confidence": 0.2493,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "churn_risk": {
+            "type": "noul",
+            "noul": 0.0058,
+            "confidence": 0.9942,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "refund_requested": {
+            "type": "noul",
+            "noul": 0.0,
+            "confidence": 1.0,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 252,
+          "output_tokens": 0
+        },
+        "routing": {
+          "model": "multilingual",
+          "repo": "convaiinnovations/laya/multilingual",
+          "reason": "explicit model='multilingual'",
+          "detection": null,
+          "workflow": null
+        },
+        "policy": {
+          "destination": "technical",
+          "needs_review": true,
+          "action": "human_review",
+          "automated_action_executed": false,
+          "threshold": 0.85,
+          "reasons": [
+            "Probabilidades ainda não validadas no seu domínio; revisão humana obrigatória.",
+            "Possível urgência elevada."
+          ]
+        },
+        "runtime": {
+          "inference_ms": 34.97,
+          "device": "cuda",
+          "state_tokens": 20,
+          "state_token_budget": 965,
+          "calibration": "not_validated_for_customer_domain",
+          "simulation": false
+        }
+      }
+    },
+    {
+      "id": "pt-03",
+      "expected": "sales",
+      "predicted": "billing",
+      "correct": false,
+      "brier": 1.86921126,
+      "result": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "billing",
+            "probabilities": {
+              "billing": 0.9666,
+              "technical": 0.0003,
+              "sales": 0.0331,
+              "other": 0.0
+            },
+            "confidence": 0.8933,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "urgency": {
+            "type": "score",
+            "score": 1.0128,
+            "legend": {
+              "0": "normal request, no deadline",
+              "1": "time-sensitive request",
+              "2": "service blocked or immediate deadline"
+            },
+            "probabilities": {
+              "0": 0.1051,
+              "1": 0.7769,
+              "2": 0.118
+            },
+            "confidence": 0.3764,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "churn_risk": {
+            "type": "noul",
+            "noul": 0.0023,
+            "confidence": 0.9977,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "refund_requested": {
+            "type": "noul",
+            "noul": 0.0103,
+            "confidence": 0.9897,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 264,
+          "output_tokens": 0
+        },
+        "routing": {
+          "model": "multilingual",
+          "repo": "convaiinnovations/laya/multilingual",
+          "reason": "explicit model='multilingual'",
+          "detection": null,
+          "workflow": null
+        },
+        "policy": {
+          "destination": "billing",
+          "needs_review": true,
+          "action": "human_review",
+          "automated_action_executed": false,
+          "threshold": 0.85,
+          "reasons": [
+            "Probabilidades ainda não validadas no seu domínio; revisão humana obrigatória."
+          ]
+        },
+        "runtime": {
+          "inference_ms": 22.46,
+          "device": "cuda",
+          "state_tokens": 23,
+          "state_token_budget": 965,
+          "calibration": "not_validated_for_customer_domain",
+          "simulation": false
+        }
+      }
+    },
+    {
+      "id": "pt-04",
+      "expected": "other",
+      "predicted": "other",
+      "correct": true,
+      "brier": 0.011733660000000007,
+      "result": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "other",
+            "probabilities": {
+              "billing": 0.0335,
+              "technical": 0.0368,
+              "sales": 0.0231,
+              "other": 0.9066
+            },
+            "confidence": 0.7033,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "urgency": {
+            "type": "score",
+            "score": 0.6568,
+            "legend": {
+              "0": "normal request, no deadline",
+              "1": "time-sensitive request",
+              "2": "service blocked or immediate deadline"
+            },
+            "probabilities": {
+              "0": 0.4567,
+              "1": 0.4299,
+              "2": 0.1135
+            },
+            "confidence": 0.1191,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "churn_risk": {
+            "type": "noul",
+            "noul": 0.0005,
+            "confidence": 0.9995,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "refund_requested": {
+            "type": "noul",
+            "noul": 0.1889,
+            "confidence": 0.8111,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 244,
+          "output_tokens": 0
+        },
+        "routing": {
+          "model": "multilingual",
+          "repo": "convaiinnovations/laya/multilingual",
+          "reason": "explicit model='multilingual'",
+          "detection": null,
+          "workflow": null
+        },
+        "policy": {
+          "destination": "other",
+          "needs_review": true,
+          "action": "human_review",
+          "automated_action_executed": false,
+          "threshold": 0.85,
+          "reasons": [
+            "Probabilidades ainda não validadas no seu domínio; revisão humana obrigatória.",
+            "Confiança abaixo do limiar de triagem configurado.",
+            "Categoria residual; confirme o destino."
+          ]
+        },
+        "runtime": {
+          "inference_ms": 27.14,
+          "device": "cuda",
+          "state_tokens": 18,
+          "state_token_budget": 965,
+          "calibration": "not_validated_for_customer_domain",
+          "simulation": false
+        }
+      }
+    },
+    {
+      "id": "pt-05",
+      "expected": "billing",
+      "predicted": "billing",
+      "correct": true,
+      "brier": 1.8680000000000272e-05,
+      "result": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "billing",
+            "probabilities": {
+              "billing": 0.9963,
+              "technical": 0.0015,
+              "sales": 0.0015,
+              "other": 0.0007
+            },
+            "confidence": 0.9797,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "urgency": {
+            "type": "score",
+            "score": 1.3783,
+            "legend": {
+              "0": "normal request, no deadline",
+              "1": "time-sensitive request",
+              "2": "service blocked or immediate deadline"
+            },
+            "probabilities": {
+              "0": 0.1321,
+              "1": 0.3574,
+              "2": 0.5105
+            },
+            "confidence": 0.1094,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "churn_risk": {
+            "type": "noul",
+            "noul": 0.014,
+            "confidence": 0.986,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "refund_requested": {
+            "type": "noul",
+            "noul": 0.1624,
+            "confidence": 0.8376,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 252,
+          "output_tokens": 0
+        },
+        "routing": {
+          "model": "multilingual",
+          "repo": "convaiinnovations/laya/multilingual",
+          "reason": "explicit model='multilingual'",
+          "detection": null,
+          "workflow": null
+        },
+        "policy": {
+          "destination": "billing",
+          "needs_review": true,
+          "action": "human_review",
+          "automated_action_executed": false,
+          "threshold": 0.85,
+          "reasons": [
+            "Probabilidades ainda não validadas no seu domínio; revisão humana obrigatória."
+          ]
+        },
+        "runtime": {
+          "inference_ms": 30.91,
+          "device": "cuda",
+          "state_tokens": 20,
+          "state_token_budget": 965,
+          "calibration": "not_validated_for_customer_domain",
+          "simulation": false
+        }
+      }
+    },
+    {
+      "id": "pt-06",
+      "expected": "technical",
+      "predicted": "technical",
+      "correct": true,
+      "brier": 0.00072187,
+      "result": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "probabilities": {
+              "billing": 0.0071,
+              "technical": 0.9768,
+              "sales": 0.0071,
+              "other": 0.0091
+            },
+            "confidence": 0.9023,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "urgency": {
+            "type": "score",
+            "score": 1.5256,
+            "legend": {
+              "0": "normal request, no deadline",
+              "1": "time-sensitive request",
+              "2": "service blocked or immediate deadline"
+            },
+            "probabilities": {
+              "0": 0.0137,
+              "1": 0.4471,
+              "2": 0.5393
+            },
+            "confidence": 0.3159,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "churn_risk": {
+            "type": "noul",
+            "noul": 0.0239,
+            "confidence": 0.9761,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "refund_requested": {
+            "type": "noul",
+            "noul": 0.0007,
+            "confidence": 0.9993,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 256,
+          "output_tokens": 0
+        },
+        "routing": {
+          "model": "multilingual",
+          "repo": "convaiinnovations/laya/multilingual",
+          "reason": "explicit model='multilingual'",
+          "detection": null,
+          "workflow": null
+        },
+        "policy": {
+          "destination": "technical",
+          "needs_review": true,
+          "action": "human_review",
+          "automated_action_executed": false,
+          "threshold": 0.85,
+          "reasons": [
+            "Probabilidades ainda não validadas no seu domínio; revisão humana obrigatória.",
+            "Possível urgência elevada."
+          ]
+        },
+        "runtime": {
+          "inference_ms": 124.49,
+          "device": "cuda",
+          "state_tokens": 21,
+          "state_token_budget": 965,
+          "calibration": "not_validated_for_customer_domain",
+          "simulation": false
+        }
+      }
+    },
+    {
+      "id": "pt-07",
+      "expected": "sales",
+      "predicted": "sales",
+      "correct": true,
+      "brier": 0.07083814,
+      "result": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "sales",
+            "probabilities": {
+              "billing": 0.0067,
+              "technical": 0.1811,
+              "sales": 0.8052,
+              "other": 0.007
+            },
+            "confidence": 0.6016,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "urgency": {
+            "type": "score",
+            "score": 0.4393,
+            "legend": {
+              "0": "normal request, no deadline",
+              "1": "time-sensitive request",
+              "2": "service blocked or immediate deadline"
+            },
+            "probabilities": {
+              "0": 0.6743,
+              "1": 0.2122,
+              "2": 0.1136
+            },
+            "confidence": 0.2338,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "churn_risk": {
+            "type": "noul",
+            "noul": 0.0033,
+            "confidence": 0.9967,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "refund_requested": {
+            "type": "noul",
+            "noul": 0.0087,
+            "confidence": 0.9913,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 256,
+          "output_tokens": 0
+        },
+        "routing": {
+          "model": "multilingual",
+          "repo": "convaiinnovations/laya/multilingual",
+          "reason": "explicit model='multilingual'",
+          "detection": null,
+          "workflow": null
+        },
+        "policy": {
+          "destination": "sales",
+          "needs_review": true,
+          "action": "human_review",
+          "automated_action_executed": false,
+          "threshold": 0.85,
+          "reasons": [
+            "Probabilidades ainda não validadas no seu domínio; revisão humana obrigatória.",
+            "Confiança abaixo do limiar de triagem configurado."
+          ]
+        },
+        "runtime": {
+          "inference_ms": 21.98,
+          "device": "cuda",
+          "state_tokens": 21,
+          "state_token_budget": 965,
+          "calibration": "not_validated_for_customer_domain",
+          "simulation": false
+        }
+      }
+    },
+    {
+      "id": "pt-08",
+      "expected": "other",
+      "predicted": "technical",
+      "correct": false,
+      "brier": 0.96009525,
+      "result": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "probabilities": {
+              "billing": 0.007,
+              "technical": 0.6812,
+              "sales": 0.016,
+              "other": 0.2959
+            },
+            "confidence": 0.4788,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "urgency": {
+            "type": "score",
+            "score": 1.0328,
+            "legend": {
+              "0": "normal request, no deadline",
+              "1": "time-sensitive request",
+              "2": "service blocked or immediate deadline"
+            },
+            "probabilities": {
+              "0": 0.0273,
+              "1": 0.9125,
+              "2": 0.0602
+            },
+            "confidence": 0.6804,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "churn_risk": {
+            "type": "noul",
+            "noul": 0.0014,
+            "confidence": 0.9986,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "refund_requested": {
+            "type": "noul",
+            "noul": 0.0,
+            "confidence": 1.0,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 240,
+          "output_tokens": 0
+        },
+        "routing": {
+          "model": "multilingual",
+          "repo": "convaiinnovations/laya/multilingual",
+          "reason": "explicit model='multilingual'",
+          "detection": null,
+          "workflow": null
+        },
+        "policy": {
+          "destination": "technical",
+          "needs_review": true,
+          "action": "human_review",
+          "automated_action_executed": false,
+          "threshold": 0.85,
+          "reasons": [
+            "Probabilidades ainda não validadas no seu domínio; revisão humana obrigatória.",
+            "Confiança abaixo do limiar de triagem configurado."
+          ]
+        },
+        "runtime": {
+          "inference_ms": 26.44,
+          "device": "cuda",
+          "state_tokens": 17,
+          "state_token_budget": 965,
+          "calibration": "not_validated_for_customer_domain",
+          "simulation": false
+        }
+      }
+    },
+    {
+      "id": "pt-09",
+      "expected": "billing",
+      "predicted": "billing",
+      "correct": true,
+      "brier": 0.0,
+      "result": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "billing",
+            "probabilities": {
+              "billing": 1.0,
+              "technical": 0.0,
+              "sales": 0.0,
+              "other": 0.0
+            },
+            "confidence": 1.0,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "urgency": {
+            "type": "score",
+            "score": 1.4429,
+            "legend": {
+              "0": "normal request, no deadline",
+              "1": "time-sensitive request",
+              "2": "service blocked or immediate deadline"
+            },
+            "probabilities": {
+              "0": 0.0202,
+              "1": 0.5167,
+              "2": 0.4631
+            },
+            "confidence": 0.2932,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "churn_risk": {
+            "type": "noul",
+            "noul": 0.0095,
+            "confidence": 0.9905,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "refund_requested": {
+            "type": "noul",
+            "noul": 0.2264,
+            "confidence": 0.7736,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 264,
+          "output_tokens": 0
+        },
+        "routing": {
+          "model": "multilingual",
+          "repo": "convaiinnovations/laya/multilingual",
+          "reason": "explicit model='multilingual'",
+          "detection": null,
+          "workflow": null
+        },
+        "policy": {
+          "destination": "billing",
+          "needs_review": true,
+          "action": "human_review",
+          "automated_action_executed": false,
+          "threshold": 0.85,
+          "reasons": [
+            "Probabilidades ainda não validadas no seu domínio; revisão humana obrigatória."
+          ]
+        },
+        "runtime": {
+          "inference_ms": 26.02,
+          "device": "cuda",
+          "state_tokens": 23,
+          "state_token_budget": 965,
+          "calibration": "not_validated_for_customer_domain",
+          "simulation": false
+        }
+      }
+    },
+    {
+      "id": "pt-10",
+      "expected": "technical",
+      "predicted": "technical",
+      "correct": true,
+      "brier": 8.800000000000367e-07,
+      "result": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "probabilities": {
+              "billing": 0.0002,
+              "technical": 0.9992,
+              "sales": 0.0002,
+              "other": 0.0004
+            },
+            "confidence": 0.9949,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "urgency": {
+            "type": "score",
+            "score": 1.3237,
+            "legend": {
+              "0": "normal request, no deadline",
+              "1": "time-sensitive request",
+              "2": "service blocked or immediate deadline"
+            },
+            "probabilities": {
+              "0": 0.062,
+              "1": 0.5524,
+              "2": 0.3856
+            },
+            "confidence": 0.2102,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "churn_risk": {
+            "type": "noul",
+            "noul": 0.0236,
+            "confidence": 0.9764,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "refund_requested": {
+            "type": "noul",
+            "noul": 0.0018,
+            "confidence": 0.9982,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 260,
+          "output_tokens": 0
+        },
+        "routing": {
+          "model": "multilingual",
+          "repo": "convaiinnovations/laya/multilingual",
+          "reason": "explicit model='multilingual'",
+          "detection": null,
+          "workflow": null
+        },
+        "policy": {
+          "destination": "technical",
+          "needs_review": true,
+          "action": "human_review",
+          "automated_action_executed": false,
+          "threshold": 0.85,
+          "reasons": [
+            "Probabilidades ainda não validadas no seu domínio; revisão humana obrigatória."
+          ]
+        },
+        "runtime": {
+          "inference_ms": 32.01,
+          "device": "cuda",
+          "state_tokens": 22,
+          "state_token_budget": 965,
+          "calibration": "not_validated_for_customer_domain",
+          "simulation": false
+        }
+      }
+    },
+    {
+      "id": "pt-11",
+      "expected": "sales",
+      "predicted": "sales",
+      "correct": true,
+      "brier": 0.09065591000000002,
+      "result": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "sales",
+            "probabilities": {
+              "billing": 0.2071,
+              "technical": 0.0006,
+              "sales": 0.7817,
+              "other": 0.0105
+            },
+            "confidence": 0.588,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "urgency": {
+            "type": "score",
+            "score": 1.1409,
+            "legend": {
+              "0": "normal request, no deadline",
+              "1": "time-sensitive request",
+              "2": "service blocked or immediate deadline"
+            },
+            "probabilities": {
+              "0": 0.1391,
+              "1": 0.581,
+              "2": 0.28
+            },
+            "confidence": 0.1387,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "churn_risk": {
+            "type": "noul",
+            "noul": 0.0007,
+            "confidence": 0.9993,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "refund_requested": {
+            "type": "noul",
+            "noul": 0.0259,
+            "confidence": 0.9741,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 244,
+          "output_tokens": 0
+        },
+        "routing": {
+          "model": "multilingual",
+          "repo": "convaiinnovations/laya/multilingual",
+          "reason": "explicit model='multilingual'",
+          "detection": null,
+          "workflow": null
+        },
+        "policy": {
+          "destination": "sales",
+          "needs_review": true,
+          "action": "human_review",
+          "automated_action_executed": false,
+          "threshold": 0.85,
+          "reasons": [
+            "Probabilidades ainda não validadas no seu domínio; revisão humana obrigatória.",
+            "Confiança abaixo do limiar de triagem configurado."
+          ]
+        },
+        "runtime": {
+          "inference_ms": 41.17,
+          "device": "cuda",
+          "state_tokens": 18,
+          "state_token_budget": 965,
+          "calibration": "not_validated_for_customer_domain",
+          "simulation": false
+        }
+      }
+    },
+    {
+      "id": "pt-12",
+      "expected": "other",
+      "predicted": "other",
+      "correct": true,
+      "brier": 0.0003996599999999994,
+      "result": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "other",
+            "probabilities": {
+              "billing": 0.0009,
+              "technical": 0.0104,
+              "sales": 0.005,
+              "other": 0.9837
+            },
+            "confidence": 0.9305,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "urgency": {
+            "type": "score",
+            "score": 0.4665,
+            "legend": {
+              "0": "normal request, no deadline",
+              "1": "time-sensitive request",
+              "2": "service blocked or immediate deadline"
+            },
+            "probabilities": {
+              "0": 0.5835,
+              "1": 0.3665,
+              "2": 0.05
+            },
+            "confidence": 0.2427,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "churn_risk": {
+            "type": "noul",
+            "noul": 0.0024,
+            "confidence": 0.9976,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "refund_requested": {
+            "type": "noul",
+            "noul": 0.0012,
+            "confidence": 0.9988,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 216,
+          "output_tokens": 0
+        },
+        "routing": {
+          "model": "multilingual",
+          "repo": "convaiinnovations/laya/multilingual",
+          "reason": "explicit model='multilingual'",
+          "detection": null,
+          "workflow": null
+        },
+        "policy": {
+          "destination": "other",
+          "needs_review": true,
+          "action": "human_review",
+          "automated_action_executed": false,
+          "threshold": 0.85,
+          "reasons": [
+            "Probabilidades ainda não validadas no seu domínio; revisão humana obrigatória.",
+            "Categoria residual; confirme o destino."
+          ]
+        },
+        "runtime": {
+          "inference_ms": 30.42,
+          "device": "cuda",
+          "state_tokens": 11,
+          "state_token_budget": 965,
+          "calibration": "not_validated_for_customer_domain",
+          "simulation": false
+        }
+      }
+    },
+    {
+      "id": "pt-13",
+      "expected": "billing",
+      "predicted": "billing",
+      "correct": true,
+      "brier": 0.0,
+      "result": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "billing",
+            "probabilities": {
+              "billing": 1.0,
+              "technical": 0.0,
+              "sales": 0.0,
+              "other": 0.0
+            },
+            "confidence": 1.0,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "urgency": {
+            "type": "score",
+            "score": 1.037,
+            "legend": {
+              "0": "normal request, no deadline",
+              "1": "time-sensitive request",
+              "2": "service blocked or immediate deadline"
+            },
+            "probabilities": {
+              "0": 0.0186,
+              "1": 0.9258,
+              "2": 0.0556
+            },
+            "confidence": 0.7213,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "churn_risk": {
+            "type": "noul",
+            "noul": 0.054,
+            "confidence": 0.946,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "refund_requested": {
+            "type": "noul",
+            "noul": 0.8529,
+            "confidence": 0.8529,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 268,
+          "output_tokens": 0
+        },
+        "routing": {
+          "model": "multilingual",
+          "repo": "convaiinnovations/laya/multilingual",
+          "reason": "explicit model='multilingual'",
+          "detection": null,
+          "workflow": null
+        },
+        "policy": {
+          "destination": "billing",
+          "needs_review": true,
+          "action": "human_review",
+          "automated_action_executed": false,
+          "threshold": 0.85,
+          "reasons": [
+            "Probabilidades ainda não validadas no seu domínio; revisão humana obrigatória.",
+            "Pedido de reembolso exige conferência humana."
+          ]
+        },
+        "runtime": {
+          "inference_ms": 27.11,
+          "device": "cuda",
+          "state_tokens": 24,
+          "state_token_budget": 965,
+          "calibration": "not_validated_for_customer_domain",
+          "simulation": false
+        }
+      }
+    },
+    {
+      "id": "pt-14",
+      "expected": "technical",
+      "predicted": "technical",
+      "correct": true,
+      "brier": 0.0002521299999999991,
+      "result": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "probabilities": {
+              "billing": 0.0025,
+              "technical": 0.9866,
+              "sales": 0.0034,
+              "other": 0.0074
+            },
+            "confidence": 0.9392,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "urgency": {
+            "type": "score",
+            "score": 1.6013,
+            "legend": {
+              "0": "normal request, no deadline",
+              "1": "time-sensitive request",
+              "2": "service blocked or immediate deadline"
+            },
+            "probabilities": {
+              "0": 0.0293,
+              "1": 0.3402,
+              "2": 0.6306
+            },
+            "confidence": 0.3074,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "churn_risk": {
+            "type": "noul",
+            "noul": 0.0014,
+            "confidence": 0.9986,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "refund_requested": {
+            "type": "noul",
+            "noul": 0.0001,
+            "confidence": 0.9999,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 260,
+          "output_tokens": 0
+        },
+        "routing": {
+          "model": "multilingual",
+          "repo": "convaiinnovations/laya/multilingual",
+          "reason": "explicit model='multilingual'",
+          "detection": null,
+          "workflow": null
+        },
+        "policy": {
+          "destination": "technical",
+          "needs_review": true,
+          "action": "human_review",
+          "automated_action_executed": false,
+          "threshold": 0.85,
+          "reasons": [
+            "Probabilidades ainda não validadas no seu domínio; revisão humana obrigatória.",
+            "Possível urgência elevada."
+          ]
+        },
+        "runtime": {
+          "inference_ms": 33.98,
+          "device": "cuda",
+          "state_tokens": 22,
+          "state_token_budget": 965,
+          "calibration": "not_validated_for_customer_domain",
+          "simulation": false
+        }
+      }
+    },
+    {
+      "id": "pt-15",
+      "expected": "sales",
+      "predicted": "sales",
+      "correct": true,
+      "brier": 0.00011569999999999975,
+      "result": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "sales",
+            "probabilities": {
+              "billing": 0.0069,
+              "technical": 0.0007,
+              "sales": 0.9918,
+              "other": 0.0006
+            },
+            "confidence": 0.9624,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "urgency": {
+            "type": "score",
+            "score": 0.8782,
+            "legend": {
+              "0": "normal request, no deadline",
+              "1": "time-sensitive request",
+              "2": "service blocked or immediate deadline"
+            },
+            "probabilities": {
+              "0": 0.2485,
+              "1": 0.6248,
+              "2": 0.1267
+            },
+            "confidence": 0.1793,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "churn_risk": {
+            "type": "noul",
+            "noul": 0.0041,
+            "confidence": 0.9959,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "refund_requested": {
+            "type": "noul",
+            "noul": 0.0193,
+            "confidence": 0.9807,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 248,
+          "output_tokens": 0
+        },
+        "routing": {
+          "model": "multilingual",
+          "repo": "convaiinnovations/laya/multilingual",
+          "reason": "explicit model='multilingual'",
+          "detection": null,
+          "workflow": null
+        },
+        "policy": {
+          "destination": "sales",
+          "needs_review": true,
+          "action": "human_review",
+          "automated_action_executed": false,
+          "threshold": 0.85,
+          "reasons": [
+            "Probabilidades ainda não validadas no seu domínio; revisão humana obrigatória."
+          ]
+        },
+        "runtime": {
+          "inference_ms": 54.48,
+          "device": "cuda",
+          "state_tokens": 19,
+          "state_token_budget": 965,
+          "calibration": "not_validated_for_customer_domain",
+          "simulation": false
+        }
+      }
+    },
+    {
+      "id": "pt-16",
+      "expected": "other",
+      "predicted": "technical",
+      "correct": false,
+      "brier": 1.92951562,
+      "result": {
+        "model": "laya-rl-agent",
+        "answers": {
+          "department": {
+            "type": "choice",
+            "choice": "technical",
+            "probabilities": {
+              "billing": 0.0029,
+              "technical": 0.9778,
+              "sales": 0.0059,
+              "other": 0.0134
+            },
+            "confidence": 0.9083,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "urgency": {
+            "type": "score",
+            "score": 1.016,
+            "legend": {
+              "0": "normal request, no deadline",
+              "1": "time-sensitive request",
+              "2": "service blocked or immediate deadline"
+            },
+            "probabilities": {
+              "0": 0.0949,
+              "1": 0.7942,
+              "2": 0.1109
+            },
+            "confidence": 0.4081,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "churn_risk": {
+            "type": "noul",
+            "noul": 0.0345,
+            "confidence": 0.9655,
+            "action": {
+              "act_probability": 1.0
+            }
+          },
+          "refund_requested": {
+            "type": "noul",
+            "noul": 0.0058,
+            "confidence": 0.9942,
+            "action": {
+              "act_probability": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 260,
+          "output_tokens": 0
+        },
+        "routing": {
+          "model": "multilingual",
+          "repo": "convaiinnovations/laya/multilingual",
+          "reason": "explicit model='multilingual'",
+          "detection": null,
+          "workflow": null
+        },
+        "policy": {
+          "destination": "technical",
+          "needs_review": true,
+          "action": "human_review",
+          "automated_action_executed": false,
+          "threshold": 0.85,
+          "reasons": [
+            "Probabilidades ainda não validadas no seu domínio; revisão humana obrigatória."
+          ]
+        },
+        "runtime": {
+          "inference_ms": 28.42,
+          "device": "cuda",
+          "state_tokens": 22,
+          "state_token_budget": 965,
+          "calibration": "not_validated_for_customer_domain",
+          "simulation": false
+        }
+      }
+    }
+  ],
+  "limitations": "Amostra didática pequena e sintética. Não é validação de produção nem calibração."
+}

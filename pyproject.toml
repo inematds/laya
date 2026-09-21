@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "laya"
-version = "0.3.4"
+version = "0.4.4"
 description = "Fast, non-autoregressive System 1 decision engine with calibrated probabilities"
 readme = "README.md"
 requires-python = ">=3.8"
@@ -36,3 +36,12 @@ dependencies = [
 [project.urls]
 Homepage = "https://huggingface.co/convaiinnovations/laya"
 Demo = "https://huggingface.co/spaces/convaiinnovations/laya-demo"
+
+[project.optional-dependencies]
+practical = ["fastapi>=0.115,<1", "uvicorn>=0.30,<1"]
+
+[tool.setuptools.packages.find]
+include = ["laya*", "practical*"]
+
+[tool.setuptools.package-data]
+practical = ["index.html", "tickets.jsonl", "requirements.txt"]

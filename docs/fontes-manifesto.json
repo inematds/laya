@@ -1,0 +1,97 @@
+{
+  "date": "2026-09-21",
+  "upstream_commit": "42626c348753fbb17572a813127df2278a1ec527",
+  "local_archive": "/home/nmaldaner/projetos/output/laya/fontes",
+  "files": [
+    {
+      "path": "jev-laya-visao-geral.md",
+      "bytes": 13128,
+      "sha256": "c507e63d04b2d38a8e84fed76299ba06788ad1a4bc8c3e6f73a3b992f6265900"
+    },
+    {
+      "path": "notebook-finetune.txt",
+      "bytes": 27941,
+      "sha256": "a8397a5a5ba7338072c10a0cdf70bd4cb4f1c3efd15f21b962c128deb801866e"
+    },
+    {
+      "path": "jev-vs-laya-diferencas.md",
+      "bytes": 3424,
+      "sha256": "0a527df378219910232b4bb44cb92396511fda09684a4ff4a4f5831e452c9240"
+    },
+    {
+      "path": "web/pypi.json",
+      "bytes": 45389,
+      "sha256": "9239a64e506c34bbe7aa2de2c8daee78046912af49858a2f1c063a5aa8719728"
+    },
+    {
+      "path": "web/hf-laya.md",
+      "bytes": 14874,
+      "sha256": "33911629d87484754bb755d2118a38626264a9b63bc33ee30131d7564f5560ee"
+    },
+    {
+      "path": "web/decision-benchmark.md",
+      "bytes": 8076,
+      "sha256": "0677415dd05fe4e027e575ff3ab030469b2dc24d31f2a2360fad24283a5fcfcc"
+    },
+    {
+      "path": "web/demo.py",
+      "bytes": 18161,
+      "sha256": "cd26da628afb96c26db6f47d4a571a5ab8ea0b018e160ea59e99e612d5b8f442"
+    },
+    {
+      "path": "web/devto.md",
+      "bytes": 30221,
+      "sha256": "2be00f500edbcaac796659329fcaf0ee969196fff89d05e1ee0cc579e16bc1aa"
+    },
+    {
+      "path": "web/jev-benchmarks.md",
+      "bytes": 9331,
+      "sha256": "fe6422e6cc707cb989672a5db283f835539d09333c093e803f47c5761334f0ea"
+    },
+    {
+      "path": "web/hf-typed.md",
+      "bytes": 5593,
+      "sha256": "59e2d2cf0203fb309d31ca6f51c4c6ab758fa32cecd82cfcd3ce20425edea7b6"
+    },
+    {
+      "path": "web/hf-multilingual.md",
+      "bytes": 6957,
+      "sha256": "8a8a77d006d07a1a1ee1f964d83b4de935dee354a3e6f371c044b4a3b4c4ef70"
+    },
+    {
+      "path": "web/manifest.json",
+      "bytes": 1798,
+      "sha256": "2fa9c389be3a3098ebf3ea075788b0b7ec3260a3973d2c3e7638905c587fac9d"
+    },
+    {
+      "path": "transcricao/transcript.srt",
+      "bytes": 43891,
+      "sha256": "2e4b252460e59606d5a6ea29f46f64c9b8e2d5c1fe4ff0cbd859a119e8e3be0d"
+    },
+    {
+      "path": "transcricao/transcript_summary.json",
+      "bytes": 590,
+      "sha256": "ec5db4bbe3df351f38b9185190290614d5f41507fc3840743d4bcfc8ea5326c2"
+    },
+    {
+      "path": "transcricao/transcript.txt",
+      "bytes": 29964,
+      "sha256": "f27b2dac6e19e3258ef35bb84ad9f8769b06d789f6e8abb0ab96d93cb52b62d9"
+    },
+    {
+      "path": "transcricao/transcript.json",
+      "bytes": 55336,
+      "sha256": "8c167f90dc79f125cbb7733f8b4cd688c2d486245f5088b84cceefaf7f1a8008"
+    },
+    {
+      "path": "dub_work/checkpoint.json",
+      "bytes": 203,
+      "sha256": "4da91976db3494f894952a1912c7671ba0150d37ac5f89c9a0d9fa71af7397e6"
+    },
+    {
+      "path": "dub_work/whisper_gpu_result.json",
+      "bytes": 59386,
+      "sha256": "57082005add2e5a98a03edc5d34753ff7b8ab8083544e1bd6419ec0037aa53f4"
+    }
+  ]
+}
