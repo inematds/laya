@@ -1,5 +1,7 @@
 # Laya INEMA — triagem prática em português
 
+**🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
+
 Adaptação do [Laya, da Convai Innovations](https://github.com/NandhaKishorM/laya), com interface local, API, CLI e avaliação reproduzível. O SDK upstream permanece disponível; a aplicação adicional vive em `practical/`.
 
 **[Guia de uso](https://inematds.github.io/laya/guia/)** · **[Curso v2, em repositório separado](https://inematds.github.io/laya-curso/)** · [README upstream preservado](docs/README-UPSTREAM.md)
